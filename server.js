@@ -26,7 +26,13 @@ mongoose
     .then(() => console.log("MongoDB successfully connected"))
     .catch((err) => console.log(err));
 
-app.use(cors({ origin: true, credentials: true }));
+    app.use(
+        cors({
+            origin: true,
+            credentials: true,
+            methods: ['GET', 'POST', 'PUT', 'PATCH'],
+        })
+    )
 
 // Passport middleware
 app.use(passport.initialize());
