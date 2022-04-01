@@ -15,7 +15,7 @@ const User = require("../../models/User");
 // @route POST api/users/register
 // @desc Register user
 // @access Public
-router.post("/register", (req, res) => {
+router.post("https://realtimeproductivity.herokuapp.com/register", (req, res) => {
     // Form validation
 
     const { errors, isValid } = validateRegisterInput(req.body);
@@ -53,7 +53,7 @@ router.post("/register", (req, res) => {
 // @route POST api/users/login
 // @desc Login user and return JWT token
 // @access Public
-router.post("/login", (req, res) => {
+router.post("https://realtimeproductivity.herokuapp.com/login", (req, res) => {
     // Form validation
 
     const { errors, isValid } = validateLoginInput(req.body);
