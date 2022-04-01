@@ -53,7 +53,7 @@ router.post("https://realtimeproductivity.herokuapp.com/register", (req, res) =>
 // @route POST api/users/login
 // @desc Login user and return JWT token
 // @access Public
-router.post("https://realtimeproductivity.herokuapp.com/login", (req, res) => {
+router.post("/login", (req, res) => {
     // Form validation
 
     const { errors, isValid } = validateLoginInput(req.body);
