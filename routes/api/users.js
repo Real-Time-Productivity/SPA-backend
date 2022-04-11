@@ -79,7 +79,7 @@ router.post("/login", (req, res) => {
                 // User matched
                 // Create JWT Payload
                 const payload = {
-                    id: user.id,
+                    id: user._id,
                     name: user.name,
                     points: user.points,
                 };

@@ -21,6 +21,9 @@ const TaskSchema = new Schema({
     duedate: {
         type: Date,
     },
+    userid: {
+        type: String,
+    },
 });
 
 const Task = mongoose.model("task", TaskSchema);

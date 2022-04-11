@@ -11,17 +11,12 @@ exports.postCreateTask = (req, res) => {
             completed: req.body.completed,
             date: req.body.date,
             duedate: req.body.duedate,
+            userid: req.body.userid,
         });
         // Save Task in the database
-        task.save(task)
-            .then((data) => {
-                res.send(data);
-            })
-            .catch((err) => {
-                res.status(500).send({
-                    message: err.message || "Some error occurred while creating the Task.",
-                });
-            });
+        task.save()
+            .then((user) => res.json(user))
+            .catch((err) => console.log(err));
     }
 };
 // Retrieve all Task from the database.
